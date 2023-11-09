@@ -10,8 +10,11 @@ services:
     image: "mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=wi22254
+      - MYSQL_USER=wi22254
+      - MYSQL_PASSWORD=wi22254
     volumes:
-      - db-data:/foo
+      - wi22254-mysql-volume:/var/lib/mysql
 
 volumes:
-  db-data:
+  wi22254-mysql-volume:
